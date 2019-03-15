@@ -1,0 +1,64 @@
+<div class="container-fluid">
+    <div class="container">
+      <div class="row testimonials-cont">
+        <!-- <div  class="col-md-4 col-sm-12 col-xs-12">
+            <span class="section-btn-link-cont"><a class="section-btn-link" href="#" alt="Apply Easy Finance">Load more testimonials</a></span>
+        </div>   -->
+        <div class="col-md-4 col-xs-2"></div>
+        <div class="col-md-8 col-xs-10 text-content">
+            <div class="col-12">
+                    <h1 class="header">Our Customers</h1> 
+            </div>             
+            <div ng2-carouselamos class="slides-wrapper"
+            [items]="items"
+            [width]="1200"
+            [$prev]="prev"
+            [$next]="next"
+            [$item]="item"
+            ></div>
+            <ng-template #prev>
+                    <div class="item-btn">
+                            <fa-icon [icon]="faChevronLeft"></fa-icon>
+                    </div>
+            </ng-template>
+            <ng-template #next>
+                <div class="item-btn">
+                        <fa-icon [icon]="faChevronRight"></fa-icon>
+                </div>
+            </ng-template>
+            <ng-template let-item let-i="index" #item>
+                <div class="items">
+                    <!-- <img src="{{item.url}}" /> -->
+                    <div class="item-msg">
+                        {{item.message}}
+                    </div>
+                    <div class="person-name">
+                        <span> {{item.name}}</span><span>, {{item.position}}</span>
+                    </div>
+                </div>
+            </ng-template>
+        </div>
+        <div class="col-md-4 col-sm-12 col-xs-12"
+       >        
+            <!-- <div class="section-text">
+                <p>
+                    <img style="float:left; width:180px; height:140px; padding-right:20px;" alt="autoport testimonial" src="https://source.unsplash.com/random"/>
+                    Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy
+                </p>
+            </div> -->
+           <!-- <div class="section-text" >    -->
+              <!-- <div class="col-12 section-img text-center">
+                  <img alt="autoport testimonial" src="https://source.unsplash.com/random"/>
+              </div>                          -->
+            <!-- <p>Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy</p>   
+                <div>
+                <span class="tes-customer">
+                    <span class="position">Pirate King,&nbsp;</span> 
+                    <span class="name">Luffy</span>
+                   </span>
+                 </div> -->
+            <!-- </div>        -->
+        <!-- </div>              -->
+      </div>
+    </div>
+  </div>

@@ -1,0 +1,42 @@
+<div class="container" >
+  <div class="row vehicle-list-cont"
+  [@entranceAnimation]='state'>
+    <div class="thumb-cont" 
+    *ngFor="let lvehicle of vehicleList; let i = index"
+    (click)="callParentShowModal(lvehicle)">
+        <div class="vehicle-item">
+         <div class="watchlist-btn"><fa-icon [icon]="faPlus"></fa-icon></div>
+         <div class="specs-cont">
+            <ul>
+              <li>
+                  <fa-icon [icon]="faWeight"></fa-icon> &nbsp;{{lvehicle.DetailsInfo[0]}}
+              </li>
+              <li>
+                  <fa-icon [icon]="faPlus"></fa-icon> &nbsp;{{lvehicle.DetailsInfo[1]}}
+              </li>           
+              <li>
+                  <fa-icon [icon]="faCog"></fa-icon> &nbsp;{{lvehicle.DetailsInfo[2]}}
+              </li>  
+              <li>
+                  <fa-icon [icon]="faGasPump"></fa-icon> &nbsp;{{lvehicle.DetailsInfo[3]}}
+              </li>                                      
+            </ul>
+          </div>         
+          <div class="quick-view">
+            Quick View
+          </div>
+         <div class="detail-cont">
+           <div class="title">{{lvehicle.Year + ' ' + lvehicle.ManufacturerName + ' ' + lvehicle.ModelName + ' ' + (lvehicle.ModelVariantName==null?'':lvehicle.ModelVariantName)}}</div>
+           <!-- <div class="specs">134,032Kms | Automatic | 1300cc | Petrol</div> -->
+         </div>
+         <div><img [src]="lvehicle.ImageUrl" alt="Image coming soon..."/></div>
+       </div>
+       <div class="price-cont">      
+         <span class="cash" [innerHTML]="lvehicle.Price + '<span>&nbsp; or &nbsp;</span>'"></span>
+         <span class="weekly" [innerHTML]="lvehicle.Finance"></span>
+       </div>      
+    </div>
+
+
+  </div>
+</div>

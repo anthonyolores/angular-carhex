@@ -1,0 +1,48 @@
+<div class="topnav" id="top_nav" >
+    <div class="row">
+        <div class="info-menu-cont">
+          <div class="container">
+            <div class="info-left-column">
+                <ul>
+                  <li>
+                    <fa-icon [icon]="faFacebook" title="faceobook"></fa-icon>
+                  </li>
+                  <li>
+                    <fa-icon [icon]="faInstagram" title="instagram"></fa-icon>
+                  </li>
+                  <li>
+                    <fa-icon [icon]="faLinkedin"></fa-icon>
+                  </li>
+                  <li>
+                    <fa-icon [icon]="faTwitter"></fa-icon>
+                  </li>
+                </ul>
+            </div>
+            <div class="info-right-column">
+                <span>
+                  <fa-icon [icon]="faEnvelope"></fa-icon>&nbsp;hello@carhex.com
+                </span>
+                <span>
+                  <fa-icon [icon]="faPhone"></fa-icon>&nbsp;0800 0228 300
+                </span>
+            </div>
+          </div>
+
+        </div>
+    </div> 
+  <div class="container">
+    <div class="row nav-container">
+      <a href="/" style="background:#fff !important; padding:0px; padding-right:20px;"><img style="width:150px;" src="../../../../assets/images/logo.svg" /></a>
+      <a href="#stock-section">Stock</a>
+      <a href="#finance-section">Finance</a>
+      <a href="#testimonials-section">Testimonials</a>
+      <a href="#contact-section">Contact</a>
+      <a class="custom-btn"  id="auth-btn" (click)="callParentShowModal()">
+        <span class="gray-btn"><fa-icon [icon]="faUserPlus"></fa-icon> &nbsp;Signup</span>
+        <span class="blue-btn"><fa-icon [icon]="faSignInAlt"></fa-icon> &nbsp;Login</span></a> 
+      <a href="javascript:void(0);" class="icon" (click)="collapseNav()">
+        <fa-icon [icon]="faBars"></fa-icon>
+      </a>
+    </div>
+  </div>
+</div>

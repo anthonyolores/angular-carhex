@@ -1,0 +1,109 @@
+
+.container-fluid{
+    background: linear-gradient(to left, rgba(0, 0, 0, 0), #002a5a);    
+    &.cont{
+        // top:108px; 
+        background: url('../../../../assets/images/banner.jpg');
+        background-repeat: no-repeat;
+        padding:0px;
+        background-position-y: 2.0em;    
+        background-attachment: fixed;
+        @media(max-width:991px){
+            background-position-y:0px;
+            top:58px;
+        }
+    }
+    &.filter{
+        padding:0px !important;
+    }
+}
+.carousel-featured-cont{
+    margin-top:7px;
+    .filler{
+        position:relative;
+        height:108px;
+        width:100%;
+
+        @media(max-width:991px){
+            display:none;
+        }
+    }
+    .carousel-cont{
+        padding:0px;
+        display: flex;
+        align-items: stretch;
+        height:370px;
+        @media(max-width:991px){
+            height: 370px;
+        }
+       
+        .title-cont{
+            padding-top: 95px;
+            flex-grow: 8;
+            padding-left:0px;
+            .title{
+                font-family: sans-serif;
+                color: #fff; 
+                font-weight: bolder;       
+                h1{
+                    font-size: 3.5em; 
+                    font-weight: bold;
+                    text-shadow: 1px 1px 50px rgba(0,0,0,0.7);
+                }    
+            }
+            .sub-title{
+                margin-top:10px;
+                font-size: 1.1em; 
+                color: #fff;
+                opacity:0.8;
+                word-wrap: break-word;
+                overflow: hidden; /* this prevents the grey divs to overflows */
+                font-weight: normal;
+            }
+            .carousel-btn{
+                padding: 12px 40px;
+                background-color: #005cd0;
+                color: #fff;
+                cursor: pointer;
+                width: -webkit-max-content;
+                width: -moz-max-content;
+                width: max-content;
+                font-size: 1.3em;
+                position: relative;
+                top: 15px;
+                text-shadow: none;
+                font-weight: bold;
+                -webkit-box-shadow: 0px 0px 121px -8px rgba(39,135,243,1);
+                -moz-box-shadow: 0px 0px 121px -8px rgba(39,135,243,1);
+                box-shadow: 0px 0px 121px -8px rgba(39,135,243,1);
+            }
+            
+            @media(max-width:991px){
+                padding-top: 115px;
+                padding-right:30px;
+            }
+            @media(max-width:767px){
+                padding-right:30px;
+            }
+            @media(max-width:575px){
+                padding-top: 115px;
+                padding-left:30px;
+                .title{
+                    h1{
+                        font-size: 2.5em;
+                    }
+                    
+                }
+            }
+        }
+
+        @media(max-width:575px){
+            padding-top: 20px;
+        }
+
+    }
+
+}
+ol.carousel-indicators{
+    display:none !important;
+}

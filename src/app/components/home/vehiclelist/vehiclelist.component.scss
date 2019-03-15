@@ -1,0 +1,171 @@
+@import '~src/app/sass/variables';
+.vehicle-list-cont{
+    display:grid;
+    grid-template-columns: auto auto auto auto;
+    grid-gap: 20px;
+    margin:25px 0px;
+    .thumb-cont{
+        .vehicle-item{     
+            max-height:250px;
+            background-color: #eee;
+            overflow: hidden; 
+            padding:0px; 
+            position:relative;
+            // object-fit: cover;
+            .quick-view{
+                position: absolute;
+                /* bottom: 50px; */
+                right: 3px;
+                /* left: 50%; */
+                top: 38px;
+                padding: 8px 15px;
+                font-size: 1.0em;
+                font-weight: bold;
+                background-color: #0079e6;
+                color: #fff;
+                text-align: center;
+                z-index: 2;
+                display: none;
+                &:active{
+                    background-color: #015096;
+                }
+            }
+            .specs-cont{
+                display:none;
+                position:absolute; 
+                top:0px;
+                color:#fff; 
+                width:100%; 
+                height:100%; 
+                z-index:1;
+                // font-weight: bold;
+                padding: 5px;
+
+                ul{
+                    padding:0px;
+                    text-align: left;
+
+                    li{
+                        float: left;
+                        padding: 5px 10px;
+                        border-bottom:1px solid #555;
+                        clear: left;
+                        width:50%;
+                        background:rgba(0,0,0,0.5);
+                        &:last-child{
+                            border:none;
+                        }
+                    }
+                }
+            }
+            .watchlist-btn{
+                position:absolute; 
+                padding:2px 6px; 
+                right:3px; 
+                top:3px; 
+                background-color: #0079e6; 
+                color: #fff;
+                z-index:2;
+                cursor: pointer;
+            }
+            .detail-cont{
+                position:absolute; 
+                bottom:0px; 
+                width:100%;
+                padding:7px; 
+                background-color: #333;
+                background: rgba(0,0,0,0.4);
+                text-align: center;
+                white-space: nowrap; 
+                overflow: hidden;
+                text-overflow: ellipsis;
+                z-index: 1;
+                .specs{
+                    padding-top:0px; 
+                    font-size: 0.84em; 
+                    color: #fff; 
+                    margin-top:-2px;
+                    opacity:0.7;
+                }
+                .title{
+                    color: #fff;
+                    font-size: 1.0em; 
+                    font-weight: 900;
+                    white-space: nowrap;
+                    overflow: hidden !important;
+                    text-overflow: ellipsis;
+                }
+            }
+            img{
+                width:100%;
+                transition: transform .4s; /* Animation */
+                // min-height: 202.5px;
+            }
+        }
+        .price-cont{
+            padding:10px; 
+            text-align: center; 
+            position:relative;
+            background-color: #fff; 
+            font-size: 1.1em; 
+            position:block;
+            font-weight: bold;
+            .cash{
+                color: #666;
+            }
+            .weekly{
+                color: #0079e6;
+            }
+        }
+        &:hover{
+            // box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.4);
+            cursor: pointer;
+            .quick-view{
+                display: block !important;
+            }
+            .specs-cont{
+                display:block !important;
+                background-color: rgba(0,0,0,0.5);
+            }
+            img{
+                transform: scale(1.1);
+            }
+            .title{
+                // color: #89ddff !important;
+            }
+        }
+    }
+
+}
+
+
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (max-width: 992px) {
+    .vehicle-list-cont{
+        grid-template-columns: auto auto auto;
+    }
+} 
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (max-width: 768px) {
+    .vehicle-list-cont{
+        grid-template-columns: auto auto auto;
+    }
+} 
+
+@media only screen and (max-width: 767px) {
+    .vehicle-list-cont{
+        grid-template-columns: auto auto;
+        grid-gap: 10px;
+        margin:0px;
+        margin-top:15px;
+    }
+} 
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 400px) {
+    .vehicle-list-cont{
+        grid-template-columns: auto;
+    }
+}  

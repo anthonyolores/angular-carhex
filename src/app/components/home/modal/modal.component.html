@@ -1,0 +1,13 @@
+<!-- The Modal -->
+<div id="myModal" class="modal"  >
+  <span class="close" id="close-modal" (click)="closeModal()">&times;</span>
+  <div class="container">
+    <div class="row" [hidden]="modalType!=1">
+     <app-auth class="modal-frame"></app-auth>
+    </div>
+    <div class="row" [hidden]="modalType!=2">
+      <app-detail class="modal-frame"></app-detail>
+     </div>
+  </div>
+</div>
+

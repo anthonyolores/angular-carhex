@@ -1,0 +1,102 @@
+@import "../../../sass/variables.scss";
+.filter-cont{
+    padding: 25px 15px;
+    background:#fff;
+    -webkit-box-shadow: 0 15px 15px -15px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 0 15px 15px -15px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 15px 15px -15px rgba(0, 0, 0, 0.2);
+    font-size: 1.1em;
+    .filter-cell-cont{
+        padding:0px;
+    }
+    .filter-cell{
+        $valuecolor: #1389f4;
+        $valuecolorActive: #0a71ce;
+        text-align: center;
+        %value-properties{
+            color: $valuecolor;
+        }     
+        padding:0px;
+        color: #666;
+        &.save-search-cont{
+            text-align: right !important;
+            padding-right:15px;
+            font-weight: bold;
+            @media (max-width:991px){
+                text-align: center !important;
+            }
+            
+        }
+        .filter-title{
+            color: #444;
+            font-weight: bold;
+        }
+        .filter-value{
+            @extend %value-properties;
+        }
+        .filter-select{
+            select{
+                border:0px;
+                color: $valuecolor;
+            }
+        }
+        .page-btn{
+            @extend %btn-base;
+            font-size: 0.9em;
+            border: 1px solid #ddd;
+            color: $valuecolor;
+            &:first-child{
+                border-right:none;
+            }
+            &:hover{
+                color: #fff;
+                background-color: $valuecolor;
+                border-color: $valuecolor;
+                cursor: pointer;
+            }
+            &:active{
+                background-color: $valuecolorActive;
+            }
+        }
+        .page-btn-search{
+            @extend %btn-base;
+            color: #fff;
+            background-color: #eee;
+            &.new-search{
+                background-color: #60c300;
+            }
+            &.save-search{
+                background-color: $valuecolor;
+                border: 1px solid $valuecolor;
+            }
+
+            &:hover{
+                color: #fff;
+                opacity:0.8;
+                cursor: pointer;
+            }
+            &:active{
+                opacity:1;
+            }
+        }
+
+    }
+
+    @media (max-width:767px){
+        .filter-cell{
+            padding: 25px 15px 15px 15px;
+        }
+    }
+}
+@media(max-width: 1200px) and (min-width: 992px){
+    .row.filter-cont{
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+}
+@media(max-width: 991px) and (min-width: 768px){
+    .filter-cell-cont:nth-child(2){
+        margin-top:25px;
+        margin-bottom:10px;
+    }
+}

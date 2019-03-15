@@ -1,0 +1,91 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~bootstrap/dist/css/bootstrap.css";
+@import url('https://fonts.googleapis.com/css?family=Questrial');
+*{
+  font-family: 'Montserrat', sans-serif;
+}
+
+html,body {
+  margin: 0;
+  font-size: 13px;
+  background-color: #eee;
+  height: 100%;
+  font-family: 'Questrial', sans-serif; 
+  scroll-behavior: smooth;
+}
+.container{
+  padding:0px;
+}
+
+.row{
+  margin:0px;
+}
+
+
+.radio {
+ display: block;
+ position: relative;
+ padding-left: 30px;
+ top:5px;
+ /* margin-bottom: 12px; */
+ cursor: pointer;
+ /* font-size: 20px; */
+ -webkit-user-select: none;
+ -moz-user-select: none;
+ -ms-user-select: none;
+ user-select: none
+}
+
+/* Hide the browser's default radio button */
+.radio input {
+ position: absolute;
+ opacity: 0;
+ cursor: pointer;
+}
+
+/* Create a custom radio button */
+.checkround {
+ position: absolute;
+ left:2px;
+ top: 1px;
+ height: 18px;
+ width: 18px;
+ background-color: #fff ;
+ border-color:#ddd;
+ border-style:solid;
+ border-width:2px;
+ border-radius: 50%;
+ -webkit-transition: display 10s; /* Safari */
+ transition: display 10s;
+
+}
+
+/* radio white background */
+.radio input:checked ~ .checkround {
+ background-color: #fff;
+}
+
+/* round selected container */
+.checkround:after {
+ content: "";
+ position: absolute;
+ display: none;
+
+
+}
+
+/* round selected show */
+.radio input:checked ~ .checkround:after {
+ display: block;
+}
+
+/* round selected */
+.radio .checkround:after {
+  left: 2px;
+ top: 2px;
+ width: 10px;
+ height: 10px;
+ border-radius: 50%;
+ background:#0079e6;
+
+}

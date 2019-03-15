@@ -1,0 +1,51 @@
+@import "../../../sass/variables.scss";
+.container-fluid{
+    background-color:#fff;
+    margin-top:50px;
+    border-top:1px solid #dedede;
+    background: url('../../../../assets/images/finance.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.finance-cont{
+    padding-left:0px;
+    padding-right:0px;
+    padding-top:70px;
+    padding-bottom:70px;
+    .text-content{
+        @extend %text-content;
+    }
+    h1.header{
+        @extend %section-header;
+    }
+
+    p.section-text{
+        @extend %section-text;
+    }
+
+    .section-btn-link-cont{
+        a.section-btn-link{
+            @extend %section-btn-link;
+        }
+        margin-bottom:51px !important;
+    }
+
+    .section-img-cont{
+        @extend %section-img-cont;
+        text-align: right;
+        img{
+            width:90% !important;
+            box-shadow: 1px 1px 70px rgba(5,5,5,0.1);
+        }
+        @media(min-width:768px) and (max-width:991px){
+            padding:0px;
+            margin-top:30px;
+        }
+        @media(max-width:767px){
+            margin-top:30px;
+            text-align:left;
+            padding:0px;
+        }
+    }
+    
+}

@@ -1,0 +1,88 @@
+$bluehighlight: #0079e6;
+%btn-base{
+    padding:10px 20px;
+}
+%section-header{
+    font-size:2.5em;
+    color:#222;
+    text-transform: capitalize;
+    font-weight: bold;
+    padding-top:30px;
+}
+
+%section-text{
+    margin-top:30px;
+    font-size: 1.3em;
+    color:#666;
+    margin-bottom:20px;
+}
+%text-content{
+    padding:0px;
+}
+%section-btn-link{
+    font-size: 1.3em;
+    color:#1389f4;
+    font-weight: bold;
+}
+
+%section-img-cont{
+    padding: 2.0em;
+    padding-top:0px;
+}
+
+$highlight-color: #1389f4;
+$highlight-color-active: #0b79dc;
+$signup-color: #00cf5c;
+
+%btn-style{
+    border-radius: 0px !important;
+    @extend %btn-base;
+    border:none;
+    cursor: pointer;
+}
+%btn-animation{
+    -webkit-transition: all 0.7s; /* For Safari 3.1 to 6.0 */
+    transition: all 0.7s;
+}
+%btn-style-active{
+    -webkit-animation-name: animate-btn-active; /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 1s; /* Safari 4.0 - 8.0 */
+    animation-name: animate-btn-active;
+    animation-duration: 1s;
+}
+%btn-style-hover{
+    @extend %btn-animation;
+    // opacity: 0.6;
+}
+@keyframes animate-btn-active {
+    from {opacity:0.6;}
+    to {opacity:1}
+}
+
+
+%topbottom-show{
+    -webkit-animation-name: animate-topbottom; /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 0.5s; /* Safari 4.0 - 8.0 */
+    animation-name: animate-topbottom;
+    animation-duration: 0.5s;
+}
+@keyframes animate-topbottom {
+    from {
+        opacity:0;
+        // top: -56px;
+    }
+    to {
+        opacity:1;
+        // top:0x;
+    }
+}
+%bottomtop-hide{
+    -webkit-animation-name: animate-bottomtop; /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 0.1s; /* Safari 4.0 - 8.0 */
+    animation-name: animate-bottomtop;
+    animation-duration: 0.1s;
+}
+
+/** DEVICES SIZES **/
+$xs-device: "(max-width:450px)";
+$w600-device: "only screen and (max-width: 600px)";

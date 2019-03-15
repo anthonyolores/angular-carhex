@@ -1,0 +1,128 @@
+@import "../../../sass/variables.scss";
+.menu-filler{
+    height:70px;
+}
+.featured-cont{
+    padding:0px;
+}
+.vehicle-cont{
+    display:grid;
+    grid-template-columns: auto auto auto auto auto;
+    grid-gap: 10px;
+
+    @media #{($w600-device)}{
+        white-space: nowrap;
+        overflow-y: hidden;
+        overflow-x: scroll;
+        display: inline-block;
+        max-width: 100%;
+        .vehicle-item{
+            width:300px;
+            display: inline-block;
+            max-height: 250px;
+        }
+    } 
+    .vehicle-item{
+        max-height: 250px;
+        img{
+            width:100%;
+        }
+    }
+}
+
+.h-search-panel-cont.show{
+    @extend %topbottom-show;
+}
+.h-search-panel-cont.hide{
+    @extend %bottomtop-hide;
+}
+.h-search-panel-cont{
+    position: relative;
+    // display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: max-content;
+    background-color: #0079e6;
+    background: rgb(0, 121, 230);
+    // border-top: 4px solid #005196;
+    padding:30px 15px 15px 15px;
+    margin-bottom: 3px;
+    @media(max-width:767px){
+        padding-bottom:30px;
+    }
+    div.container{
+        display: grid;
+        grid-template-rows: min-content min-content;
+    }
+
+    div{
+        // display: grid;
+        input::placeholder {
+            color: #fff;
+        }
+        input,
+        select{
+            font-size: 1.1em;
+            border-radius: 0px;
+            border: none;
+            background-color: #0065c1;
+            border-top: 1px solid #075bc1;
+            border-bottom: 1px solid #328cef;
+            color: #fff;
+            height: unset;
+            line-height: 1;
+            padding: 10px;
+            cursor: pointer;
+        }
+        option{
+            &:checked,
+            &:not(:checked) {
+                color: #666;
+                background: #fff;
+            }
+
+        }
+
+        .range-cont{
+            display: grid;
+            grid-template-columns: 0.5fr 0.5fr;
+            grid-template-rows: max-content;
+
+            >.form-group:first-child{
+                border-right:1px solid #328cef;
+            }
+        }
+        .btn-search-action-cont{
+            text-align: right;
+            .btn-search-action{
+                font-weight:bold;
+                width:max-content;           
+                &:hover{
+                    @extend %btn-style-hover;
+                }
+                &:active{
+                    @extend %btn-style-active;
+                }
+                &.submit-search{
+                    background: #fff;
+                    font-weight: 800;
+                    color: #1365c0;
+                    @extend %btn-style;
+                    padding: 10px 20px;
+                }
+                &.reset-search{
+                    background: #1878e6;
+                    // border: 1px solid #519aec;
+                    @extend %btn-style;
+                    &:hover{
+                        text-decoration: underline;
+                    }
+                }
+    
+    
+            }
+        }
+
+
+    }
+
+}

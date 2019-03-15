@@ -1,0 +1,146 @@
+<div class="container">
+  <div class="row details-modal-cont">
+      <div class="vehicle-img-cont">
+        <div class="row">
+            <div class="vehicle-preview"
+            [ngStyle]="{'background':'url('+vehicleDetail.ImageUrl+')'}">
+                <span class="img-btn prev" (click)="imgSlide(0)"><fa-icon [icon]="faAngleDoubleLeft"></fa-icon>&nbsp;Prev</span>
+                <span class="img-btn next" (click)="imgSlide(1)">Next&nbsp;<fa-icon [icon]="faAngleDoubleRight"></fa-icon></span>
+                <div class="features">
+                    <span class="item">Bluetooth</span>
+                    <span class="item">ABS Brakes</span>
+                    <span class="item">Alloy Wheels</span>
+                    <span class="item">Push Start</span>
+                    <span class="item">Fog Lights</span>
+                    <span class="item">Chrome Package</span>
+                    <span class="item">Climate Control</span>
+                    <span class="item">Leather Interior</span>
+                    <span class="item">Heated Seats</span>
+                    <span class="item">Back Camera</span>
+
+                </div>
+            </div>
+          </div>
+          <div class="row">
+              <div class="thumb-cont">
+                  <div class="thumb-item" 
+                  *ngFor="let index of vehicleDetail==null?[]:vehicleDetail.ImageIndexes"
+                  (click)="imgPreview(index)">
+                      <img class="img-responsive" [src]="getUrl(index)"/>
+                </div>
+              </div>
+          </div>
+          <div class="row">
+                <div></div>
+          </div>
+      </div>
+      <div class="details-cont">
+        <div class="row">
+            <div class="views">1,340 Views</div>
+        </div>
+        <div class="row text-center">
+            <div class="buynow-price" [innerHTML]="vehicleDetail == null?'':vehicleDetail.Price"></div>
+              <div  class="buynow-btn">
+                  Buy Now
+              </div>
+        </div>       
+        <div class="row title-cont">
+            {{vehicleDetail == null?'':vehicleDetail.Year + ' ' + vehicleDetail.ManufacturerName + ' ' + vehicleDetail.ModelName}}
+        </div>       
+        <div class="row title-desc-cont" [innerHTML]="vehicleDetail == null?'':vehicleDetail == null?'':(vehicleDetail.Year + ' ' + vehicleDetail.ManufacturerName + ' ' + vehicleDetail.ModelName).split('').reverse().join('')">   
+        </div>
+        <div class="row specs">            
+                <div class="col-3" *ngFor="let spec of vehicleDetail.DetailsInfo==null?[]:vehicleDetail.DetailsInfo; let i = index;">       
+                    <span [ngSwitch]="i">
+                        <span *ngSwitchCase="'0'">
+                            <fa-icon [icon]="faTachometerAlt"></fa-icon>
+                        </span>
+                        <span *ngSwitchCase="'1'">
+                            <fa-icon [icon]="faMapPin"></fa-icon>
+                        </span>
+                        <span *ngSwitchCase="'2'">
+                            <fa-icon [icon]="faCogs"></fa-icon>
+                        </span>
+                        <span *ngSwitchCase="'3'">
+                            <fa-icon [icon]="faGasPump"></fa-icon>
+                        </span>                        
+                    </span>
+                    <span>&nbsp;{{spec}}</span>
+                </div>
+        </div>    
+        <div class="options-parent-cont">
+            <div class="row">
+                <div class="option-cont first" (click)="changePrice()">
+                        <div class="option-div">
+                                <label class="title">Warranty</label>
+                        </div>
+                        <div class="option-div">
+                            <label class="radio">6
+                                <input type="radio" name="warranty">
+                                <span class="checkround"></span>
+                            </label>
+                        </div>
+                        <div class="option-div">
+                            <label class="radio">12
+                                <input type="radio" name="warranty" checked>
+                                <span class="checkround"></span>
+                            </label>
+                        </div>
+                        <div class="option-div">
+                            <label class="radio">36
+                                <input type="radio" name="warranty">
+                                <span class="checkround"></span>
+                            </label>
+                        </div>
+                        <div class="option-div">
+                            <label class="radio">48
+                                <input type="radio" name="warranty">
+                                <span class="checkround"></span>
+                            </label>
+                        </div>  
+                        <div class="option-div">
+                            <label class="radio">60
+                                <input type="radio" name="warranty">
+                                <span class="checkround"></span>
+                            </label>
+                        </div>                              
+                </div>                           
+        </div>
+        <div class="row option-cont first">            
+            <div class="col-2 box-option">       
+                Register      
+            </div>
+            <div class="col-3 box-option selected" (click)="setRegister(1)" [ngClass]="{'selected':register}">           
+                Yes 
+            </div>
+            <div class="col-3 box-option" (click)="setRegister(0)" [ngClass]="{'selected':!register}">              
+                No
+            </div>
+        </div>    
+        <div class="row option-cont first">            
+            <div class="col-2 box-option">        
+                Valet     
+            </div>
+            <div class="col-3 box-option" (click)="setValet(1)" [ngClass]="{'selected':valet}">             
+                Standard
+            </div>
+            <div class="col-3 box-option selected" (click)="setValet(0)" [ngClass]="{'selected':!valet}">        
+                Premium     
+            </div>
+        </div>     
+        <div class="row option-cont first">            
+                <div class="col-2 box-option">        
+                    Delivery     
+                </div>
+                <div class="col-3 box-option selected" (click)="setDelivery(1)" [ngClass]="{'selected':delivery}">             
+                    December
+                </div>
+                <div class="col-3 box-option" (click)="setDelivery(0)" [ngClass]="{'selected':!delivery}">             
+                    Choose
+                </div>                
+        </div>    
+        </div>          
+        
+      </div>
+  </div>
+</div> 

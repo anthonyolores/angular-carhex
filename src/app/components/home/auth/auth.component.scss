@@ -1,0 +1,58 @@
+.auth-cont{
+    .auth-cont-col{
+        padding:50px 50px;
+        &:nth-child(1){         
+            background-color: #fff;
+        }
+        &:nth-child(2){
+            background-color: #f4f4f4;
+        }
+        .header{
+            font-size: 1.5em;
+            font-weight: bold;
+        }
+        .form-container{
+            padding-top:20px;
+            padding-bottom:20px;
+            .submit-btn{
+                padding:10px 25px;               
+                color:#fff;
+                font-size: 1.2em;
+                text-align:center;
+                margin-top:20px;
+                background-color: #0371d8;
+                font-weight: bold;
+                cursor: pointer;
+                &.fb-btn{
+                    background-color: #f4f4f4;
+                    color: #4267b2;
+                }
+                &.signup-btn{               
+                    &:hover{
+                        background-color: #0065c1;
+                    }
+                    &:active{
+                        background-color: #0259aa;
+                    }
+                }
+
+ 
+            }
+            .form-group{
+                margin-bottom:10px;
+                .or{
+                    padding-top:30px;
+                    text-align: center;
+                    color: #888;
+                }
+                input{
+                    border-radius: 0px;
+                    padding:15px;
+                }
+                
+            }
+        }
+        
+    }
+
+}

@@ -1,0 +1,101 @@
+
+@import "../../../sass/variables.scss";
+
+.container-fluid{
+    background-color: #0061CC;
+    border-bottom:1px solid #eee;
+    background: url('../../../../assets/images/contactus.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.contact-cont{
+    padding-left:0px;
+    padding-right:0px;
+    padding-top:70px;
+    padding-bottom:70px; 
+
+    h1.header{
+        color:#fff;
+    }
+    p.section-text{
+        @extend %section-text;
+        color:#fff;
+    }
+    .contact-list{
+        display: block;
+        .contact-item{
+            width:35%;
+            padding:15px 25px;
+            background: rgba(255,255,255, 0.1);
+            margin-bottom:25px;
+            display:block;
+
+            > div{
+                display: inline-block;
+                font-size: 1.3em;
+                color:#fff;     
+                &.item-icon{
+                    padding-right:20px;
+                }         
+                &.item-detail{
+                    border-left:1px solid #4096fd;
+                    padding-left:20px;
+                }
+                
+            }
+
+            &.subscribe{
+                padding:0px;
+                .subscribe-btn{
+                    border:none !important;                 
+                    color:#fff;
+                    padding:15px 10px;
+                    width:30%;
+                    text-align: center;
+                    cursor:pointer;
+                    background:#001E40;
+                    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#002e60+0,001e40+100 */
+                    background: #002e60; /* Old browsers */
+                    background: -moz-linear-gradient(left, #002e60 0%, #001e40 100%); /* FF3.6-15 */
+                    background: -webkit-linear-gradient(left, #002e60 0%,#001e40 100%); /* Chrome10-25,Safari5.1-6 */
+                    background: linear-gradient(to right, #002e60 0%,#001e40 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+                    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#002e60', endColorstr='#001e40',GradientType=1 ); /* IE6-9 */                  
+                    &:hover{
+                        opacity:0.8;
+                    }
+                    &:active{
+                        opacity:1;
+                    }
+                }
+                .subscribe-email{               
+                    padding: 10px;
+                    padding-left: 20px;
+                    padding-right: 10px;
+                    width: 70%;
+                    input{
+                        width:90%;
+                        background: none;
+                        border: none;
+                        border-bottom: 1px solid #4096fd;
+                        color:#fff;
+                        &:focus{
+                            outline: none;
+                        }
+                        &::placeholder 
+                        { 
+                            color: #fff !important;
+                        }
+
+                    }
+
+                } 
+
+            }
+
+            @media(max-width:992px) {
+                width:auto;
+            }
+            
+        }
+    }
+}
